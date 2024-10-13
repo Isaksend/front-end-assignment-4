@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Exercise 4</title>
+    <link rel="stylesheet" type="text/css" href="style/style.css">
+</head>
+<body>
+    <section class="exe">
+        <div class="title-exer">
+            Task 1:
+        </div>
+        <h2>
+           What Can JavaScript Do?
+        </h2>
+        <p id="demo">
+            JavaScript can change HTMl content
+        </p>
+        <button type="button" onclick="document.getElementById('demo').innerHTML = 'Hello JavaScript! '">Click Me!</button>
+    </section>
+    <section class="exe">
+        <div class="title-exer">
+            Task 2:
+        </div>
+        <button onclick="document.getElementById('myImage').src='style/asset/pic_bulbon.gif'">Turn on the light</button>
+        <img id="myImage" src="style/asset/pic_bulboff.gif" style="width:100px">
+        <button onclick="document.getElementById('myImage').src='style/asset/pic_bulboff.gif'">Turn off the light</button>
+    </section>
+    <section class="exe">
+        <div class="title-exer">
+            Task 3:
+        </div>
+        <p id="demo2">
+            Example text
+        </p>
+        <button type="button" onclick="document.getElementById('demo2').style.fontSize = '35px'">
+            Bigger
+        </button>
+    </section>
+    <section class="exe">
+        <div class="title-exer">
+            Task 4:
+        </div>
+        <p id="demo3">
+            Example text
+        </p>
+        <button type="button" onclick="document.getElementById('demo3').style.display = 'block'">
+            Show
+        </button>
+        <button type="button" onclick="document.getElementById('demo3').style.display = 'none'">
+            Hidden
+        </button>
+    </section>
+    <section class="exe">
+        <div class="title-exer">
+            Task 7:
+        </div>
+        <h2>Arithmetic Operation</h2>
+        <button onclick="performArithmetic()">Calculate</button>
+        <p id="result"></p>
+    </section>
+    <section class="exe">
+        <div class="title-exer">
+            Task 8:
+        </div>
+        <h2>Current Date</h2>
+        <p id="date"></p>
+    </section>
+    <section class="exe">
+        <div class="title-exer">
+            Task 9:
+        </div>
+        <h2>Leap Year Checker</h2>
+        <button onclick="checkLeapYear()">Check Year</button>
+        <p id="leapYearResult"></p>
+    </section>
+    <section class="exe">
+        <div class="title-exer">
+            Task 10:
+        </div>
+        <h2>Multiplication and Division</h2>
+        <div>
+            <label for="num1">1st Number :</label>
+            <input type="number" id="num1" /><br />
+            <label for="num2">2nd Number :</label>
+            <input type="number" id="num2" /><br /><br />
+            <button onclick="multiply()">Multiply</button>
+            <button onclick="divide()">Divide</button>
+        </div>
+        <p>The Result Is :</p>
+        <p id="result2"></p>
+    </section>
+    <section class="exe">
+        <div class="title-exer">
+            Task 11
+        </div>
+        <div class="converter">
+            <label for="id_c">Celsius</label>
+            <input type="text" id="id_c" /><br /><br />
+            <label for="id_f">Fahrenheit</label>
+            <input type="text" id="id_f" readonly /><br /><br />
+            <button type="button" onclick="convertFunc()">Convert</button>
+        </div>
+    </section>
+
+    <section class="exe">
+        <div class="title-exer">
+            Task 12
+        </div>
+        <h2>Check Even or Odd</h2>
+        <div>
+            <label for="evenOddNum">Enter a Number :</label>
+            <input type="number" id="evenOddNum" />
+            <button onclick="checkEvenOdd()">Check</button>
+        </div>
+        <p id="evenOddResult"></p>
+    </section>
+    <section class="exe">
+        <div class="title-exer">
+            Task 13
+        </div>
+        <h2>Find Largest and Least Number</h2>
+        <div>
+            <label for="numA">Number 1 :</label>
+            <input type="number" id="numA" /><br />
+            <label for="numB">Number 2 :</label>
+            <input type="number" id="numB" /><br />
+            <label for="numC">Number 3 :</label>
+            <input type="number" id="numC" /><br />
+            <button onclick="findLargestAndLeast()">Find</button>
+        </div>
+        <p id="largestAndLeastResult"></p>
+    </section>
+    <section class="exe">
+        <div class="title-exer">
+            Task 14
+        </div>
+        <h2>Calculate Area of a Triangle</h2>
+        <div>
+            <label for="sideA">Side A :</label>
+            <input type="number" id="sideA" value="5" /><br />
+            <label for="sideB">Side B :</label>
+            <input type="number" id="sideB" value="6" /><br />
+            <label for="sideC">Side C :</label>
+            <input type="number" id="sideC" value="7" /><br /><br />
+            <button onclick="calculateTriangleArea()">Calculate Area</button>
+        </div>
+        <p id="triangleAreaResult"></p>
+    </section>
+    <section class="exe">
+        <div class="title-exer">
+            Task 15
+        </div>
+        <h2>Calculate Factorial</h2>
+        <div>
+            <label for="factorialNum">Enter a Number :</label>
+            <input type="number" id="factorialNum" />
+            <button onclick="calculateFactorial()">Calculate Factorial</button>
+        </div>
+        <p id="factorialResult"></p>
+    </section>
+    <section class="exe">
+        <div class="title-exer">
+            Task 16
+        </div>
+        <h2>Count Vowels and Consonants</h2>
+        <div>
+            <label for="inputString">Enter a String :</label>
+            <input type="text" id="inputString" />
+            <button onclick="countVowelsAndConsonants()">Count</button>
+        </div>
+        <p id="vowelConsonantResult"></p>
+    </section>
+    <section class="exe">
+        <div class="title-exer">
+            Task 17
+        </div>
+        <h2>Convert Seconds to Hours and Minutes</h2>
+        <div>
+            <label for="secondsInput">Enter Seconds :</label>
+            <input type="number" id="secondsInput" />
+            <button onclick="convertSeconds()">Convert</button>
+        </div>
+        <p id="timeResult"></p>
+    </section>
+    <section class="exe">
+        <div class="title-exer">
+            Task 18
+        </div>
+        <h2>Find Most Frequent Number</h2>
+        <div>
+            <label for="arrayInput">Enter Array (comma separated) :</label>
+            <input type="text" id="arrayInput" />
+            <button onclick="findMostFrequent()">Find Most Frequent</button>
+        </div>
+        <p id="mostFrequentResult"></p>
+    </section>
+    <section class="exe">
+        <div class="title-exer">
+            Task 19
+        </div>
+        <h2>Calculate Fibonacci Sequence</h2>
+        <div>
+            <label for="fibonacciNum">Enter a Number :</label>
+            <input type="number" id="fibonacciNum" />
+            <button onclick="calculateFibonacci()">Calculate Fibonacci</button>
+        </div>
+        <p id="fibonacciResult"></p>
+    </section>
+    <section class="exe">
+        <div class="title-exer">
+            Task 20
+        </div>
+        <h2>Days Left Before New Year</h2>
+        <div>
+            <button onclick="daysUntilNewYear()">Calculate Days Left</button>
+        </div>
+        <p id="daysLeftResult"></p>
+    </section>
+<script src="index.js"></script>
+</body>
+</html>
